@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyAccess - Браузерное расширение для веб-доступности</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/mockup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="header-content">
+            <a href="#" class="logo">
+                <svg width="25" height="25">
+                    <use href="./assets/logo.svg#main"></use>
+                </svg>
+                <h1>EasyAccess</h1>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Главная</a>
+                <a href="about.html">О проекте</a>
+                <a href="team.html">Команда</a>
+                <a href="journal.html">Журнал</a>
+                <a href="resources.html">Ресурсы</a>
+                <a href="#" class="button button-soft">Установить</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="hero hero-primary">
+        <div class="container">
+            <h2>Делаем веб доступным для каждого</h2>
+            <p>Создавайте, делитесь и устанавливайте пакеты<br>для адаптации сайтов под ваши потребности.</p>
+
+            <div class="hero-buttons">
+                <a href="#" class="button button-primary">
+                    <i class="ph ph-download"></i>
+                    Установить расширение
+                </a>
+                <a href="#" class="button button-soft">
+                    Открыть маркетплейс
+                </a>
+            </div>
+        </div>
+
+        <div class="demo-preview">
+            <div class="browser-mockup">
+                <div class="browser-bar">
+                    <div class="browser-dots">
+                        <div class="browser-dot"></div>
+                        <div class="browser-dot"></div>
+                        <div class="browser-dot"></div>
+                    </div>
+                    <div class="url-bar">https://github.com</div>
+                </div>
+                <div style="height: 400px; background: #f6f8fa"></div>
+            </div>
+            <div class="extension-preview">
+                <img src="./assets/demo.png" alt="Extension preview">
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: var(--spacing-lg);">Основные возможности</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="ph ph-fill ph-plus-circle"></i>
+                    </div>
+                    <h3>Создание пакетов</h3>
+                    <p>Пишите JavaScript и CSS скрипты для улучшения доступности любых сайтов</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="ph ph-fill ph-download"></i>
+                    </div>
+                    <h3>Импорт экспорт</h3>
+                    <p>Делитесь пакетами с другими пользователями через файлы или маркетплейс</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="ph ph-fill ph-gear"></i>
+                    </div>
+                    <h3>Гибкая настройка</h3>
+                    <p>Указывайте домены для работы пакетов и настраивайте их поведение</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="container">
+        <p style="color: var(--text-secondary)">&copy; 2025 EasyAccess. Проектная практика МосПолитеха</p>
+    </div>
+</footer>
+</body>
+</html>

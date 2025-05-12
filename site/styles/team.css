@@ -1,0 +1,115 @@
+.team-sections {
+    padding: 80px 0;
+    background: var(--bg-secondary);
+}
+
+.team-section:not(:last-child) {
+    padding-bottom: 80px;
+}
+
+.section-header {
+    text-align: center;
+
+    & h3 {
+        font-size: 1.5rem;
+        margin-bottom: var(--spacing-xs);
+        color: var(--primary);
+    }
+
+    & p {
+        font-size: 1.125rem;
+        color: var(--text-secondary);
+    }
+}
+
+.member-avatar {
+    width: 80px;
+    height: 80px;
+    background: var(--soft-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-lg);
+    font-size: 32px;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.member-name {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+}
+
+.member-role {
+    color: var(--primary);
+    font-weight: 500;
+    margin-bottom: var(--spacing-md);
+}
+
+.member-description {
+    color: var(--text-secondary);
+    font-size: var(--font-size-md);
+}
+
+.teamlead-card {
+    grid-column: span 2;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-xl) calc(var(--spacing-xl) * 2);
+    gap: var(--spacing-xl);
+
+    & .member-avatar {
+        background: white;
+        color: var(--primary);
+        flex-shrink: 0;
+    }
+
+    & .member-name {
+        font-size: 1.5rem;
+        margin-bottom: var(--spacing-xs);
+    }
+
+    & .member-role {
+        color: var(--soft-primary);
+        font-size: 1.125rem;
+    }
+
+    & .member-description {
+        color: white;
+        opacity: 0.9;
+    }
+
+    @media (max-width: 768px) {
+        grid-column: span 1;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.teamlead-info {
+    text-align: left;
+    flex: 1;
+
+    @media (max-width: 768px) {
+        text-align: center;
+    }
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-md);
+}
+
+.skill-tag {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: var(--font-size-sm);
+}

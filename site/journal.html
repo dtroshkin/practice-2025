@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyAccess - Журнал проекта</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/journal.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="header-content">
+            <a href="./index.html" class="logo">
+                <svg width="25" height="25">
+                    <use href="./assets/logo.svg#main"></use>
+                </svg>
+                <h1>EasyAccess</h1>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Главная</a>
+                <a href="about.html">О проекте</a>
+                <a href="team.html">Команда</a>
+                <a href="journal.html" class="active">Журнал</a>
+                <a href="resources.html">Ресурсы</a>
+                <a href="#" class="button button-soft">Установить</a>
+            </nav>
+        </div>
+    </div>
+</header>
+<main>
+    <section class="hero journal-hero">
+        <div class="container">
+            <h2>Журнал разработки</h2>
+            <p>Следите за прогрессом проекта, новыми функциями и важными обновлениями</p>
+        </div>
+    </section>
+    <section class="posts-container">
+        <div class="container posts-grid">
+            <article class="post-card">
+                <div class="post-image"
+                     style="background-image: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);"></div>
+                <div class="post-content">
+                    <div class="post-meta">
+                        <div class="post-date">
+                            <i class="ph ph-calendar-blank"></i>
+                            8 мая 2025
+                        </div>
+                        <div class="post-author">
+                            <i class="ph ph-user"></i>
+                            Трошкин Д. А.
+                        </div>
+                    </div>
+                    <h3 class="post-title">Релиз версии 1.0.0: Основной функционал готов!</h3>
+                    <p class="post-excerpt">Рады сообщить о выпуске первой стабильной версии EasyAccess! В релиз вошли все базовые функции: создание и управление пакетами, маркетплейс скриптов, система рейтингов и возможность импорта/экспорта. Расширение прошло тестирование на совместимость с основными браузерами.</p>
+                    <div class="tags">
+                        <span class="tag">Релиз</span>
+                        <span class="tag">Маркетплейс</span>
+                        <span class="tag">v1.0</span>
+                    </div>
+                    <a href="#" class="read-more">
+                        Читать далее
+                        <i class="ph ph-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <article class="post-card">
+                <div class="post-image"
+                     style="background-image: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);"></div>
+                <div class="post-content">
+                    <div class="post-info">
+                        <div class="post-meta">
+                            <div class="post-date">
+                                <i class="ph ph-calendar-blank"></i>
+                                23 апреля 2025
+                            </div>
+                            <div class="post-author">
+                                <i class="ph ph-user"></i>
+                                Мясников Д. С.
+                            </div>
+                        </div>
+                        <h3 class="post-title">Ключевая архитектура</h3>
+                        <p class="post-excerpt">Дизайн расширения готов, UseCase прописан. Мы приняли ключевое решение в отказе от Golang-бэкенда в сторону DBaS-сервиса Supabase, что должно существенно ускорить разработку</p>
+                    </div>
+                    <div class="post-actions">
+                        <div class="post-tags">
+                            <span class="tag">Архитектура</span>
+                        </div>
+                        <a href="#" class="read-more">
+                            Читать далее
+                            <i class="ph ph-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="post-card">
+                <div class="post-image"
+                     style="background-image: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);"></div>
+                <div class="post-content">
+                    <div class="post-meta">
+                        <div class="post-date">
+                            <i class="ph ph-calendar-blank"></i>
+                            5 февраля 2025
+                        </div>
+                        <div class="post-author">
+                            <i class="ph ph-user"></i>
+                            Деев Е. В.
+                        </div>
+                    </div>
+                    <h3 class="post-title">Старт проекта EasyAccess</h3>
+                    <p class="post-excerpt">Официальный старт разработки браузерного расширения EasyAccess! Сформирована команда, определены основные цели проекта и технологический стек. Начинаем работу над архитектурой расширения и дизайном интерфейса.</p>
+                    <div class="post-tags">
+                        <span class="tag">Старт</span>
+                        <span class="tag">Команда</span>
+                        <span class="tag">Архитектура</span>
+                    </div>
+                    <a href="#" class="read-more">
+                        Читать далее
+                        <i class="ph ph-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="container">
+        <p style="color: var(--text-secondary)">&copy; 2025 EasyAccess. Проектная практика МосПолитеха</p>
+    </div>
+</footer>
+</body>
+</html>
