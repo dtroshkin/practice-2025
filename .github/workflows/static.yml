@@ -1,0 +1,65 @@
+name: Deploy static content to Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      # Install Doxygen
+      - name: Install Doxygen
+        run: sudo apt install doxygen && doxygen --version
+
+      - name: Install Graphviz
+        run: sudo apt install graphviz
+
+      # Создаем Doxyfile если его нет
+      - name: Setup Doxyfile
+        run: |
+          if [ ! -f Doxyfile ]; then
+            doxygen -g Doxyfile
+            # Настраиваем параметры
+            sed -i 's/^INPUT.*/INPUT = src/g' Doxyfile
+            sed -i 's/^OUTPUT_DIRECTORY.*/OUTPUT_DIRECTORY = docs\/api/g' Doxyfile
+            sed -i 's/^PROJECT_NAME.*/PROJECT_NAME = "Chat Application"/g' Doxyfile
+            sed -i 's/^EXTRACT_ALL.*/EXTRACT_ALL = YES/g' Doxyfile
+          fi
+
+      # Create documentation
+      - name: Create documentation
+        run: doxygen
+
+      # Копируем сгенерированную документацию в папку site
+      - name: Copy docs to site
+        run: |
+          mkdir -p ./site/api
+          cp -r ./docs/api/html/* ./site/api/
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Публикуем только папку site
+          path: './site/'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
