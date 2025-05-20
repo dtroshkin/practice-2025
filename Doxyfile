@@ -1,0 +1,10 @@
+PROJECT_NAME = "Practice 2025 Chat"
+PROJECT_BRIEF = "Документация чат-приложения"
+OUTPUT_DIRECTORY = ./docs/api
+INPUT = ./src/client ./src/server
+RECURSIVE = YES
+EXTRACT_ALL = YES
+FILE_PATTERNS = *.cpp *.h
+GENERATE_HTML = YES
+HTML_OUTPUT = html
+GENERATE_LATEX = NO
