@@ -39,7 +39,7 @@ jobs:
           if [ ! -f Doxyfile ]; then
             doxygen -g Doxyfile
             # Настраиваем параметры
-            sed -i 's/^INPUT.*/INPUT = src/g' Doxyfile
+            sed -i 's/^INPUT.*/INPUT = src/client src/server/g' Doxyfile
             sed -i 's/^OUTPUT_DIRECTORY.*/OUTPUT_DIRECTORY = docs\/api/g' Doxyfile
             sed -i 's/^PROJECT_NAME.*/PROJECT_NAME = "Chat Application"/g' Doxyfile
             sed -i 's/^EXTRACT_ALL.*/EXTRACT_ALL = YES/g' Doxyfile
